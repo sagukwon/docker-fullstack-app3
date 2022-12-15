@@ -1,0 +1,7 @@
+# repository push 누락되어서 재시도함
+FROM node:alpine
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+COPY ./ ./
+CMD ["npm", "run", "start"]
